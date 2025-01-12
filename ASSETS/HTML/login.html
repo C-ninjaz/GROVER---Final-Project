@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> GROVER </title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Assets/CSS/login.css">
+    <script src="https://kit.fontawesome.com/8bdeff30b3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar container">
+        <a href="" class="logo">
+            <img src="./Assets/Images/grover_logo.svg" alt="Grover's Logo" class="logo-image">
+        </a>
+        <div class="navbar-menu">
+            <ul class="navbar-list">
+                <li class="list-item"><a href="#" class="list-link current-link">Home</a></li>
+                <li class="list-item"><a href="#" class="list-link current-link">Menu</a></li>
+                <li class="list-item"><a href="#" class="list-link current-link">Services</a></li>
+                <li class="list-item"><a href="#" class="list-link current-link">Shop</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="form-body">
+        <div class="form-container">
+            <!-- Signin/Signup Toggle -->
+            <!-- <input type="radio" id="signin-tab" name="tab" checked> -->
+            <!-- <label class="form-label" for="signin-tab" id="signin-tab">Sign In</label> -->
+            <!-- <input type="radio" id="signup-tab" name="tab"> -->
+            <!-- <label class="form-label" for="signup-tab" id="signup-tab">Sign Up</label> -->
+
+            <label class="form-label active" id="signin-tab" onclick="showForm('signin')">Sign In</label>
+            <label class="form-label" id="signup-tab" onclick="showForm('signup')">Sign Up</label>
+
+
+            <!-- Signin Form -->
+            <div class="form signin-form ">
+                <h2>Sign In</h2>
+                <!-- <form action="./index.html" method="POST"> -->
+                <form id="signin-form" onsubmit="handleSignin(event)">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit" href="./index.html">Sign In</button>
+                </form>
+                <!-- <p class="form-text">Don't have an account? <label class="form-label" for="signup-tab">Sign Up
+                        Here</label>
+                </p> -->
+                <p class="form-text">Don't have an account?
+                    <span class="form-label" onclick="showForm('signup')">Sign Up Here</span>
+                </p>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="form signup-form" style="display: none;">
+                <h2>Sign Up</h2>
+                <!-- <form action="#" method="POST"> -->
+                <form id="signup-form" onsubmit="handleSignup(event)">
+                    <input type="text" name="fullname" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <!-- <p class="form-text">Already have an account? <label class="form-label" for="signin-tab">Sign In
+                        Here</label></p> -->
+                <p class="form-text">Already have an account?
+                    <span class="form-label" onclick="showForm('signin')">Sign In Here</span>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="container">
+            <hr class="horizontal-line">
+            <div class="footer-bottom-data">
+                <span class="copyright-information">Copyright &copy;2024. All Rights Reserved.</span>
+                <div class="legal-information">
+                    <span class="copyright-information">Supermarket Grocery Supplies</span>
+                    <span class="copyright-information">Pvt Ltd<span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./Assets/JScripts/app.js"></script>
+
+</html>
