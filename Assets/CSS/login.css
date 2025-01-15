@@ -233,3 +233,93 @@ button[type="submit"]:hover {
     font-size: 1.4rem;
     color: var(--dark-color);
 }
+
+/* Mobile Styles (max-width: 599px) */
+@media (max-width: 599px) {
+    body {
+        font-size: 1.2rem;
+        /* Adjust font size for mobile */
+    }
+
+    .navbar {
+        flex-direction: column;
+        /* Stack navbar items vertically */
+        align-items: center;
+    }
+
+    .navbar-list {
+        flex-direction: column;
+        /* Stack list items vertically */
+        padding: 0;
+        /* Remove padding */
+    }
+
+    .logo {
+        margin: 0;
+        /* Remove margin for mobile */
+    }
+
+    .form-container {
+        width: 90%;
+        /* Make form container width responsive */
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    button[type="submit"] {
+        font-size: 1.2rem;
+        /* Adjust input and button font size */
+    }
+}
+
+/* Tablet Styles (min-width: 600px and max-width: 899px) */
+@media (min-width: 600px) and (max-width: 899px) {
+    body {
+        font-size: 1.3rem;
+        /* Slightly larger font size for tablets */
+    }
+
+    .navbar {
+        justify-content: space-between;
+        /* Keep navbar items spaced out */
+    }
+
+    .form-container {
+        width: 50%;
+        /* Adjust form container width */
+    }
+
+    .list-item {
+        margin: 1rem;
+        /* Adjust margin for list items */
+    }
+}
+
+/* Desktop Styles (min-width: 900px) */
+@media (min-width: 900px) {
+    body {
+        font-size: 1.4rem;
+        /* Default font size for desktops */
+    }
+
+    .navbar {
+        padding-block: 1rem;
+        /* Increase navbar padding */
+    }
+
+    .form-container {
+        width: 30%;
+        /* Set form container width for larger screens */
+    }
+
+    .list-item {
+        margin: 1.5rem;
+        /* Adjust margin for larger screens */
+    }
+
+    .logo-image {
+        min-width: 20rem;
+        /* Increase logo size for desktops */
+    }
+}
